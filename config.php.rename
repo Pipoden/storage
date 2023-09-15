@@ -1,0 +1,39 @@
+<?php 
+	// **************************
+	// *** configuration file ***
+	// **************************
+	
+	// Items/boxes Database connection information
+	$DB_user = "myDBUserName";			// change this to your DB User name
+	$DB_location = "localhost";
+	$DB_password = "myDBUserPassword";	// change this to your DB Password
+	$DB_structure = "pipopopo";
+	$DB_table_user = "storage_user";
+	$DB_table_item = "storage_items";
+	$DB_table_box = "storage_boxes";
+	
+	// Folder configuration
+	$folder_images = "images/";	
+	$folder_upload = "pictures/";
+	$path_upload = "/var/www/html/storage/pictures/";
+	
+	// Misc configuration
+	$boxGenerateNameLength = 3;
+	$boxGenerationMaxTry = 1000;
+	$debug_mode = true;
+	$html_title = "Storage";
+	$maxBoxInList = 10;
+	$baseUrl = "http://10.0.0.176/storage/";
+	$uploadedPictureMaxSize = 250;	// in pixel
+	$QRCodeFontSize = 128;			// in pixel
+	
+	// Rank setup
+	// Rank 0 = not logged
+	// Rank 1 = base inscription
+	// Rank 2..5 = database manual modification
+	$rankNeeded_view = 0;
+	$rankNeeded_viewBoxList = 2;
+	$rankNeeded_add = 3;
+	$rankNeeded_delBox = 4;
+	
+?>

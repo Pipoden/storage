@@ -1,0 +1,145 @@
+.mybox  
+{   position:fixed;  
+	display:none;  
+	background-color:black;  
+	border: 1px solid red;  
+	padding: 10px;  
+	border-radius:15px;  
+	opacity: 0.8;  
+	color: white;  
+}  
+.mytip  
+{	color:salmon;  
+	font-style:italic;  
+	font-weight:bold;  
+	text-decoration:underline;  
+}  
+
+@font-face {
+	font-family: "timess";
+	src: url("TIMESS__.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "icons";
+	src: url("multimedia icons.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'boxNumber';
+	src: url("ConsolaMono-Bold.ttf") format("truetype");
+}
+
+
+body
+{
+	background-image:url("images/20230817104442.png");
+	font-size: 20pt ;
+	color: #dae36e;
+	text-shadow: -1px -1px 0 #382a38, 1px -1px 0 #382a38, -1px 1px 0 #382a38, 1px 1px 0 #382a38;
+	font-family: "timess";
+}
+
+.icons
+{
+	display: inline-block;
+	font-family: "icons";
+	font-size: 200px ;
+	text-align:center;
+}
+
+.icons2
+{
+	display: inline-block;
+	font-family: "icons";
+	font-size: 100px ;
+	text-align:center;
+}
+
+.calendar_cell
+{
+	height:120px;
+	width:200px;
+	border: 2px solid black;
+	text-align:center;
+
+}
+
+input {
+  font-size: 30px;
+}
+
+textarea {
+  font-size: 30px;
+}
+
+.spanObject
+{
+	background-color: #000000;
+	background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+	height: 100%;
+	background-position: bottom;
+	text-align:center;
+	
+}
+.feedback {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #dae36e;
+  line-height: 20px;
+}
+
+.iconsM {
+	display: inline-block;
+	font-family: "icons";
+	transform: scale(-1, 1);
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+.flipH {
+	display: inline-block;
+	transform: scale(-1, 1);
+	color: #1c87c9;
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+a {
+  color: #dae36e;
+}
+
+.calendar_select
+{
+	text-shadow: none;
+}
+
+h1
+{
+	font-size: 32pt ;
+	color: #dae36e;
+	font-family: "timess";
+	text-align:center;
+	text-shadow: -1px -1px 0 #382a38, 1px -1px 0 #382a38, -1px 1px 0 #382a38, 1px 1px 0 #382a38;
+}
+
+#title
+{
+	position:absolute;
+	left:50%;
+	margin-left:-445px;
+}
+
+<style tyle=text/css>
+	option.red {background-color: #cc0000; font-weight: bold; font-size: 12px;}
+	option.pink {background-color: #ffcccc;}
+</style>
+
+
