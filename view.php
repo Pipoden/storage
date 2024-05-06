@@ -76,7 +76,9 @@ check_cookies();
 			while ($donnees = mysqli_fetch_array($namecheck))
 			{
 				// ajout des items a un tableau JS
-				echo("items.push(['".$donnees[0]."','".$donnees[1]."','".$donnees[2]."','".$donnees[3]."','".$donnees[5]."']);\n");
+				$data_name = str_replace(array("\r\n","\r","\"n"),array("\\r\\n","\\r","\\n"),$donnees[1]);
+				$data_desc =  str_replace(array("\r\n","\r","\"n"),array("\\r\\n","\\r","\\n"),$donnees[2]);
+				echo("items.push(['".$donnees[0]."','".$data_name."','".$data_desc."','".$donnees[3]."','".$donnees[5]."']);\n");
 			}
 		}
 			
