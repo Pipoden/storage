@@ -74,8 +74,11 @@ check_cookies();
 				echo '<input type="submit" value="Modifier" style="height:100px; width:500px" />'."\r\n";
 				echo '<input id="delButton" type="button" value="Supprimer" style="height:100px; width:250px" /><br>'."\r\n";
 				echo '<input id="turn" type="button" value="Tourner l\'image" style="height:100px; width:500px" />'."\r\n";
+				// Link to QRCode
+				echo '<a href="'.$baseUrl.'qrcodeItem.php?name='.$id.'">QRCode</a>';
 				echo '</form>'."\r\n";
 				echo '</SPAN>';
+				
 				?>
 				<Script>
 					document.getElementById("delButton").addEventListener("click", del);
