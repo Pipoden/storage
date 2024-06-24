@@ -95,23 +95,10 @@
 	function formatName($p_name)
 	{
 		// Remplace ou supprime les caracteres speciaux
-		$result = strtolower($p_name);
-		$result = str_replace("é", "e",$result);
-		$result = str_replace("è", "e",$result);
-		$result = str_replace("ê", "e",$result);
-		$result = str_replace("ë", "e",$result);
-		$result = str_replace("ô", "o",$result);
-		$result = str_replace("ö", "o",$result);
-		$result = str_replace("î", "i",$result);
-		$result = str_replace("ï", "i",$result);
-		$result = str_replace("û", "u",$result);
-		$result = str_replace("ü", "u",$result);
-		$result = str_replace("ÿ", "y",$result);
-		$result = str_replace("ç", "c",$result);
-		$result = str_replace("-", " ",$result);
-		$result = str_replace(",", " ",$result);
+		// $result = strtolower($p_name);
 		
-		$result = preg_replace('/[^a-zA-Z0-9_.]/', '', $result);
+		$result = str_replace("'", "´",$p_name);
+		$result = preg_replace('/[^a-zA-Z0-9A-zÀ-ÿ<>\s\/.,;´:\-]/', '_', $result);
 		return $result;
 	}
 	

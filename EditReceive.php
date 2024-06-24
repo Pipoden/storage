@@ -106,6 +106,15 @@ check_cookies();
 					$objName = mysqli_real_escape_string($conMySql,htmlspecialchars($_POST['name']));
 					$objDesc = mysqli_real_escape_string($conMySql,htmlspecialchars($_POST['desc']));
 					$objBox = mysqli_real_escape_string($conMySql,htmlspecialchars($_POST['box']));
+					
+					// Replace special char
+					
+					$objName = formatName($objName); //preg_replace('/[^a-zA-Z0-9A-z<>\s\/.,;´:\-&éèàêôûîïüâ]/', '_', $objName);
+					$objDesc = formatName($objDesc); //preg_replace('/[^a-zA-Z0-9A-z<>\s\/.,;´:\-&éèàêôûîïüâ]/', '_', $objDesc);
+					$objBox = formatName($objBox); //preg_replace('/[^a-zA-Z0-9A-z<>\s\/.,;´:\-&éèàêôûîïüâ]/', '_', $objBox);
+					
+					
+					
 
 					mysqli_query($conMySql,"update ".$DB_table_item." SET name='$objName', description='$objDesc', packageId='$objBox', picture='$picName' WHERE id='$objId';");
 					mysqli_close($conMySql);
@@ -129,6 +138,12 @@ check_cookies();
 					$objName = mysqli_real_escape_string($conMySql,htmlspecialchars($_POST['name']));
 					$objDesc = mysqli_real_escape_string($conMySql,htmlspecialchars($_POST['desc']));
 					$objBox = mysqli_real_escape_string($conMySql,htmlspecialchars($_POST['box']));
+					
+					// Replace special char
+					
+					$objName = formatName($objName); //preg_replace('/[^a-zA-Z0-9A-z<>\s\/.,;´:\-&éèàêôûîïüâ" *"]/', '_', $objName);
+					$objDesc = formatName($objDesc); //preg_replace('/[^a-zA-Z0-9A-z<>\s\/.,;´:\-&éèàêôûîïüâ" *"]/', '_', $objDesc);
+					$objBox = formatName($objBox); //preg_replace('/[^a-zA-Z0-9A-z<>\s\/.,;´:\-&éèàêôûîïüâ" *"]/', '_', $objBox);
 
 					mysqli_query($conMySql,"update ".$DB_table_item." SET name='$objName', description='$objDesc', packageId='$objBox' WHERE id='$objId';");
 					mysqli_close($conMySql);
